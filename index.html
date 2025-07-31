@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="utility.css">
+</head>
+
+<body>
+    <div class="container flex">
+        <div class="left">
+
+            <div class="close">
+                <img style="background-color: rgb(20, 37, 217); width: 35px;"
+                    src="https://cdn.hugeicons.com/icons/cancel-01-solid-standard.svg?v=2.0" alt="">
+            </div>
+            <div class="home">
+                <div class="log"><img src="" alt=""></div>
+                <ul>
+                    <li><img src="home.png" width="18px" alt="home">home</li>
+                    <li><img src="seach icon.png" width="25px" alt="">search</li>
+                </ul>
+            </div>
+
+
+            <h2>🎵 MP3 Playlist Player</h2>
+
+            <footer>
+                <h3>📜 Playlist</h3>
+
+                <!-- Scrollable Container -->
+                <div class="playlist-scroll">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Song Name</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody id="playlistTable"></tbody>
+                    </table>
+                </div>
+            </footer>
+
+        </div>
+
+
+        <!-- right part -->
+        <div class="right border">
+
+            <div class="header">
+                <div class="nav">
+                    <img class=" invert hamburger" style="background-color: white;"
+                        src="https://cdn.hugeicons.com/icons/menu-01-solid-standard.svg?v=2.0" alt="">
+                </div>
+                <div class="button">
+                    <button class="signupbtn">Sign up</button>
+                    <butto class="loginbtn">Log in</button>
+                </div>
+            </div>
+
+            <div class="spotifyplaylist">
+                <h1>playlist</h1>
+                <div class="cardContainer">
+                    <div class="card">
+                        <div class="circle-button">
+                            <img src="https://cdn.hugeicons.com/icons/youtube-solid-standard.svg" alt="youtube"
+                                width="32" height="32">
+                        </div>
+
+                        <img src="https://i.scdn.co/image/ab67616d00001e020a47bbe7141fdfe0eb2cdba7" alt="">
+                        <h2>Sahiba</h2>
+                        <p>Aditya Rikhari</p>
+                    </div>
+
+                    <div class="card">
+                        <img src="https://i.scdn.co/image/ab67616d00001e02a7e251b543c77a6ed356dfbe" alt="">
+                        <h2>Saiyaara</h2>
+                        <p>Tanshik Bagchi,Faheem Abdulllah</p>
+                    </div>
+                </div>
+
+                <body>
+                    <div class="status">
+                        <strong>Now Playing:</strong> <span id="nowPlaying">None</span><br>
+                        <progress id="progressBar" value="0" max="100"></progress><br>
+                        ⏱ <span id="currentTime">0:00</span> / <span id="duration">0:00</span>
+                    </div>
+
+                    <div class="controls">
+                        <button onclick="prevSong()">⏮ Previous</button>
+                        <button onclick="togglePlayPause()" id="playPauseBtn">▶️ Play</button>
+                        <button onclick="nextSong()">⏭ Next</button>
+                        <a id="downloadBtn" class="button" download disabled>📥 Download</a>
+                    </div>
+                </body>
+            </div>
+        </div>
+
+</body>
+<script src="script.js"></script>
+
+</html>
